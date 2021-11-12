@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body class="bg-light-grayish-cyan flex flex-col items-center min-h-screen-screen">
+    <header class="h-32 flex items-center justify-center">
+      <img src="./images/logo.svg" alt="logo">
+    </header>
+    <main class="bg-white w-full p-4 pt-5 rounded-t-2xl font-display font-bold">
+      <div class="left">
+        <div class="input-container flex flex-col w-full">
+          <h4 class="text-dark-grayish-cyan-2">Bill</h4>
+          <div class="input-block relative">
+            <img src="./images/rupee-indian.svg" alt="Rs" class="absolute top-1/2 transform -translate-y-1/2 left-4">
+            <input type="number" name="amount" id="amount" value="0" class='w-full p-4 py-3 text-right bg-light-grayish-cyan-2 rounded-md no-arrows text-very-dark-cyan'>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
