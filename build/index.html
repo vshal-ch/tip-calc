@@ -7,25 +7,382 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="../images/favicon-32x32.png"
     />
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic" rel="stylesheet" />
-    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
     <title>Frontend Mentor | Tip calculator app</title>
+    <script src="./script.js" defer></script>
   </head>
-  <body class="bg-light-grayish-cyan flex flex-col items-center min-h-screen-screen">
-    <header class="h-32 flex items-center justify-center">
-      <img src="./images/logo.svg" alt="logo">
+  <body
+    class="
+      bg-light-grayish-cyan
+      flex flex-col
+      justify-between
+      items-center
+      min-h-screen
+      md:justify-evenly
+    "
+  >
+    <header
+      class="
+        h-auto
+        flex
+        items-center
+        justify-center
+        flex-grow flex-shrink-0
+        py-8
+        md:flex-grow-0 md:flex-shrink md:py-0
+      "
+    >
+      <img src="../images/logo.svg" alt="logo" />
     </header>
-    <main class="bg-white w-full p-4 pt-5 rounded-t-2xl font-display font-bold">
-      <div class="left">
-        <div class="input-container flex flex-col w-full">
-          <h4 class="text-dark-grayish-cyan-2">Bill</h4>
+    <main
+      class="
+        bg-white
+        w-full
+        h-auto
+        py-8
+        rounded-t-2xl
+        font-display font-bold
+        flex flex-col
+        gap-6
+        items-center
+        md:flex-row md:gap-8 md:p-8 md:w-10/12
+        max-w-4xl
+        md:rounded-2xl md:items-stretch md:shadow-lg
+        lg:gap-10 lg:p-10
+      "
+    >
+      <div class="left flex flex-col gap-6 w-4/5 lg:gap-8 md:w-full">
+        <div class="input-container flex flex-col w-full gap-2">
+          <h4 class="text-dark-grayish-cyan text-sm">Bill</h4>
           <div class="input-block relative">
-            <img src="./images/rupee-indian.svg" alt="Rs" class="absolute top-1/2 transform -translate-y-1/2 left-4">
-            <input type="number" name="amount" id="amount" value="0" class='w-full p-4 py-3 text-right bg-light-grayish-cyan-2 rounded-md no-arrows text-very-dark-cyan'>
+            <img
+              src="../images/rupee-indian.svg"
+              alt="Rs"
+              class="absolute top-1/2 transform -translate-y-1/2 left-4"
+            />
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="0"
+              class="
+                w-full
+                p-4
+                py-2
+                text-right
+                bg-light-grayish-cyan-2
+                rounded-md
+                no-arrows
+                text-very-dark-cyan
+                border-2
+                outline-none
+                border-transparent
+                focus:border-strong-cyan
+                font-bold
+              "
+            />
           </div>
         </div>
+        <section class="tip-taker flex flex-col gap-3">
+          <h4 class="text-dark-grayish-cyan text-sm">Select Tip %</h4>
+          <div
+            class="
+              checkgrid
+              grid grid-cols-2 grid-rows-3
+              gap-3
+              lg:grid-cols-3 lg:grid-rows-2
+            "
+          >
+            <div
+              class="
+                check-container
+                bg-very-dark-cyan
+                rounded-md
+                relative
+                overflow-hidden
+                text-white
+              "
+            >
+              <input
+                type="radio"
+                name="tip-percent"
+                id="five"
+                class="radio appearance-none absolute"
+              />
+              <label
+                for="five"
+                class="
+                  text-lg
+                  flex
+                  justify-center
+                  items-center
+                  p-1.5
+                  w-full
+                  h-full
+                  check-label
+                  hover:bg-light-strong-cyan
+                  transition-colors
+                "
+                >5%</label
+              >
+            </div>
+            <div
+              class="
+                check-container
+                bg-very-dark-cyan
+                rounded-md
+                relative
+                overflow-hidden
+                text-white
+              "
+            >
+              <input
+                type="radio"
+                name="tip-percent"
+                id="ten"
+                class="radio appearance-none absolute"
+              />
+              <label
+                for="ten"
+                class="
+                  text-lg
+                  flex
+                  justify-center
+                  items-center
+                  p-1.5
+                  w-full
+                  h-full
+                  check-label
+                  hover:bg-light-strong-cyan
+                  transition-colors
+                "
+                >10%</label
+              >
+            </div>
+            <div
+              class="
+                check-container
+                bg-very-dark-cyan
+                rounded-md
+                relative
+                overflow-hidden
+                text-white
+              "
+            >
+              <input
+                type="radio"
+                name="tip-percent"
+                id="fifteen"
+                class="radio appearance-none absolute"
+              />
+              <label
+                for="fifteen"
+                class="
+                  text-lg
+                  flex
+                  justify-center
+                  items-center
+                  p-1.5
+                  w-full
+                  h-full
+                  check-label
+                  hover:bg-light-strong-cyan
+                  transition-colors
+                "
+                >15%</label
+              >
+            </div>
+            <div
+              class="
+                check-container
+                bg-very-dark-cyan
+                rounded-md
+                relative
+                overflow-hidden
+                text-white
+              "
+            >
+              <input
+                type="radio"
+                name="tip-percent"
+                id="twofive"
+                class="radio appearance-none absolute"
+              />
+              <label
+                for="twofive"
+                class="
+                  text-lg
+                  flex
+                  justify-center
+                  items-center
+                  p-1.5
+                  w-full
+                  h-full
+                  check-label
+                  hover:bg-light-strong-cyan
+                  transition-colors
+                "
+                >25%</label
+              >
+            </div>
+            <div
+              class="
+                check-container
+                bg-very-dark-cyan
+                rounded-md
+                relative
+                overflow-hidden
+                text-white
+              "
+            >
+              <input
+                type="radio"
+                name="tip-percent"
+                id="fifty"
+                class="radio appearance-none absolute"
+              />
+              <label
+                for="fifty"
+                class="
+                  text-lg
+                  flex
+                  justify-center
+                  items-center
+                  p-1.5
+                  w-full
+                  h-full
+                  check-label
+                  hover:bg-light-strong-cyan
+                  transition-colors
+                "
+                >50%</label
+              >
+            </div>
+            <input
+              type="number"
+              name="percent"
+              id="percent"
+              placeholder="Custom"
+              class="
+                no-arrows
+                text-right
+                bg-light-grayish-cyan-2
+                rounded-md
+                px-3
+                placeholder-very-dark-cyan placeholder
+                font-bold
+              "
+            />
+          </div>
+        </section>
+        <div class="input-container flex flex-col w-full gap-2">
+          <h4 class="text-dark-grayish-cyan text-sm">Number of People</h4>
+          <div class="input-block relative">
+            <img
+              src="../images/icon-person.svg"
+              alt="person"
+              class="absolute top-1/2 transform -translate-y-1/2 left-4"
+            />
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="0"
+              class="
+                w-full
+                p-4
+                py-2
+                text-right
+                bg-light-grayish-cyan-2
+                rounded-md
+                no-arrows
+                text-very-dark-cyan
+                border-2
+                outline-none
+                border-transparent
+                focus:border-strong-cyan
+                font-bold
+              "
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          right
+          w-5/6
+          bg-very-dark-cyan
+          p-5
+          pt-7
+          pb-4
+          rounded-xl
+          flex flex-col
+          gap-8
+          justify-between
+          md:p-7 md:pt-9 md:pb-6 md:w-full
+        "
+      >
+        <div class="amount flex flex-col gap-4 lg:gap-7">
+          <div class="flex justify-between items-center">
+            <p class="flex flex-col">
+              <span class="text-white text-sm"> Tip Amount </span
+              ><span class="text-dark-grayish-cyan-2 text-xs">/ person</span>
+            </p>
+            <p
+              class="
+                tipperperson
+                font-bold
+                text-2xl
+                md:text-3xl
+                lg:4xl
+                text-strong-cyan
+              "
+            >
+              0
+            </p>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="flex flex-col">
+              <span class="text-white text-sm"> Total </span
+              ><span class="text-dark-grayish-cyan-2 text-xs">/ person</span>
+            </p>
+            <p
+              class="
+                amountperperson
+                font-bold
+                text-2xl
+                md:text-3xl
+                lg:4xl
+                text-strong-cyan
+              "
+            >
+              0
+            </p>
+          </div>
+        </div>
+        <button
+          type="reset"
+          class="
+            w-full
+            bg-strong-cyan
+            py-2
+            rounded-md
+            font-display
+            text-xl
+            font-bold
+            text-very-dark-cyan
+            hover:bg-light-strong-cyan
+            transition-colors
+          "
+        >
+          RESET
+        </button>
       </div>
     </main>
   </body>
